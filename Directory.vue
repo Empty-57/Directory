@@ -1,5 +1,10 @@
 <script>
 export default {
+  data(){
+    return{
+       directory_flag:false
+    }
+  },
   mounted() {
     let count = 0;
     const timer3 = setInterval(() => {
@@ -15,6 +20,7 @@ export default {
           return h('a',{class:(article_a[index].tagName==='H1'? '':'ml-4 ')+'hover:text-cyan-600 active:text-cyan-700 text-left text-pretty break-all',href:"#"+article_a[index].id},article_a[index].innerText)
         }))
         render(renderFn(),directory)
+        this.directory_flag=true
 
         clearInterval(timer3)
       }else {
@@ -31,8 +37,8 @@ export default {
 <template>
   <HomeMenu></HomeMenu>
   <ToTop></ToTop>
-    <div id="directory" class="bg-zinc-300/60 dark:bg-zinc-900/60 rounded shadow shadow-zinc-400/60 dark:shadow-zinc-950/60 overflow-y-auto overflow-x-hidden max-h-[80svh] self-start sticky top-16 mx-4 hidden lg:block">
+    <div id="directory" class="sticky top-16 min-w-60 w-fit opacity-0 duration-500 bg-zinc-300/60 dark:bg-zinc-900/60 rounded shadow shadow-zinc-400/60 dark:shadow-zinc-950/60 overflow-y-auto overflow-x-hidden max-h-[80svh] self-start mx-4 hidden lg:block" :class="{'opacity-100':directory_flag}">
       <div class="sticky top-0 bg-zinc-300 dark:bg-zinc-900 w-full self-start p-4 py-2 border-b-[1px] border-zinc-700">目录</div>
-  </div>
+    </div>
 
 </template>

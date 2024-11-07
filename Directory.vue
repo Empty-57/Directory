@@ -3,7 +3,7 @@ export default {
   mounted() {
     let count = 0;
     const timer3 = setInterval(() => {
-      if(document.querySelector('#article_body').firstChild){
+      if(document.querySelector('#directory').firstChild){
         count=0;
 
         const directory=document.querySelector('#directory')

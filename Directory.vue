@@ -32,7 +32,7 @@ onMounted(() => {
         let hl_link;
         for (let i of article_a) {
           let top = i.getBoundingClientRect().top;
-          if (top >= 0 && top <= 300) {
+          if (top >= 0 && top <= 500) {
             hl_link = document.querySelector('[href="#' + i.id + '"]');
             if (hl_link) {
               anchor_highlight(hl_link)

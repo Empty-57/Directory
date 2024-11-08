@@ -9,4 +9,4 @@ vue 目录组件
 ![ ](https://github.com/Empty-57/Directory/blob/main/4.png)
 
 ## 用法：
-导入后放在父元素同级/根元素下，默认生成于右上角
+导入后放在父元素/根元素下，默认生成于右上角
